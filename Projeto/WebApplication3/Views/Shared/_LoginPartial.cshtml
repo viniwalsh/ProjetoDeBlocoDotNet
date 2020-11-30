@@ -1,0 +1,34 @@
+﻿@*@model IEnumerable<WebApplication3.Models.ProfileModel>*@
+@using Microsoft.AspNet.Identity
+@using WebApplication3.Context
+@using WebApplication3.Models
+
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "form-inline my-2 my-lg-0" }))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @{ 
+                WebApplication3.Context.AppContext db = new WebApplication3.Context.AppContext();
+                Guid identityId = new Guid(User.Identity.GetUserId());
+                ProfileModel profileModel = db.AccountProfileModel.Find(identityId);
+            }
+            
+            @Html.ActionLink("Olá " + profileModel.ProfileUserName + " !", "Details", "ProfileModels", new { id = profileModel.ProfileId }, htmlAttributes: new { title = "Detalhes" , @class = "nav-link"})
+
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()" class="nav-link">Sair</a></li>
+    </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Registrar", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "nav-link" })</li>
+        <li>@Html.ActionLink("Entrar", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "nav-link" })</li>
+    </ul>
+}
