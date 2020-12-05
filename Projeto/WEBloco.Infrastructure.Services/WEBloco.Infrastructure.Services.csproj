@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.4.2" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.3.0" />
+    <PackageReference Include="System.IO" Version="4.3.0" />
+    <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WEBloco.Domain.Model\WEBloco.Domain.Model.csproj" />
+  </ItemGroup>
+
+</Project>

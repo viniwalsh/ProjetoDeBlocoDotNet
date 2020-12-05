@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/galeria-imagem-db-server/databases/amizade-galeria-imagens-db",
+      "type": "mssql.azure",
+      "connectionId": "AmizadeContext",
+      "secretStore": "AzureAppSettings"
+    },
+    "storage1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/galeriaimagemstorage",
+      "type": "storage.azure",
+      "connectionId": "Stora",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

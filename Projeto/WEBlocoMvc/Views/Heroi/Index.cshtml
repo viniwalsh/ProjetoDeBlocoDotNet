@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WEBloco.Domain.Model.Entities.Heroi>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Codinome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Poder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lancamento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codinome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Poder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lancamento)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.HeroiId">Galeria de Fotos</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
