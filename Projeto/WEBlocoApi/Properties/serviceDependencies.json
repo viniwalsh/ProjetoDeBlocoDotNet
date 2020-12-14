@@ -11,6 +11,9 @@
     "storage1": {
       "type": "storage",
       "connectionId": "Stora"
+    },
+    "secrets1": {
+      "type": "secrets"
     }
   }
 }

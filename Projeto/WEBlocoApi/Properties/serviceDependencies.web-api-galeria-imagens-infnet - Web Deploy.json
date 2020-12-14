@@ -1,4 +1,4 @@
-{
+
   "dependencies": {
     "mssql1": {
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/galeria-imagem-db-server/databases/amizade-galeria-imagens-db",

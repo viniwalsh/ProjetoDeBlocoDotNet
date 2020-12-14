@@ -2,7 +2,10 @@
   "dependencies": {
     "mssql1": {
       "type": "mssql.local",
-      "connectionId": "AmizadeContext"
+      "connectionId": "HeroiContext"
+    },
+    "secrets1": {
+      "type": "secrets.user"
     }
   }
 }
